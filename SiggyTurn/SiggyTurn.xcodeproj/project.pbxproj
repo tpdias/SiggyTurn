@@ -7,26 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A7E8EE8A2A966C4D00EAF80A /* SiggyTurnApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E8EE892A966C4D00EAF80A /* SiggyTurnApp.swift */; };
-		A7E8EE8C2A966C4D00EAF80A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E8EE8B2A966C4D00EAF80A /* ContentView.swift */; };
-		A7E8EE8E2A966C4E00EAF80A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A7E8EE8D2A966C4E00EAF80A /* Assets.xcassets */; };
-		A7E8EE912A966C4E00EAF80A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A7E8EE902A966C4E00EAF80A /* Preview Assets.xcassets */; };
-		A7E8EE932A966C4E00EAF80A /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E8EE922A966C4E00EAF80A /* Persistence.swift */; };
-		A7E8EE962A966C4E00EAF80A /* SiggyTurn.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A7E8EE942A966C4E00EAF80A /* SiggyTurn.xcdatamodeld */; };
+		A7E8EEA92A966C9200EAF80A /* SiggyTurnApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E8EEA82A966C9200EAF80A /* SiggyTurnApp.swift */; };
+		A7E8EEAB2A966C9200EAF80A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E8EEAA2A966C9200EAF80A /* ContentView.swift */; };
+		A7E8EEAD2A966C9300EAF80A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A7E8EEAC2A966C9300EAF80A /* Assets.xcassets */; };
+		A7E8EEB02A966C9300EAF80A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A7E8EEAF2A966C9300EAF80A /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		A7E8EE862A966C4D00EAF80A /* SiggyTurn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SiggyTurn.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		A7E8EE892A966C4D00EAF80A /* SiggyTurnApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiggyTurnApp.swift; sourceTree = "<group>"; };
-		A7E8EE8B2A966C4D00EAF80A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		A7E8EE8D2A966C4E00EAF80A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		A7E8EE902A966C4E00EAF80A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		A7E8EE922A966C4E00EAF80A /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
-		A7E8EE952A966C4E00EAF80A /* SiggyTurn.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SiggyTurn.xcdatamodel; sourceTree = "<group>"; };
+		A7E8EEA52A966C9200EAF80A /* SiggyTurn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SiggyTurn.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A7E8EEA82A966C9200EAF80A /* SiggyTurnApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiggyTurnApp.swift; sourceTree = "<group>"; };
+		A7E8EEAA2A966C9200EAF80A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		A7E8EEAC2A966C9300EAF80A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A7E8EEAF2A966C9300EAF80A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		A7E8EE832A966C4D00EAF80A /* Frameworks */ = {
+		A7E8EEA22A966C9200EAF80A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -36,39 +32,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		A7E8EE7D2A966C4D00EAF80A = {
+		A7E8EE9C2A966C9200EAF80A = {
 			isa = PBXGroup;
 			children = (
-				A7E8EE882A966C4D00EAF80A /* SiggyTurn */,
-				A7E8EE872A966C4D00EAF80A /* Products */,
+				A7E8EEA72A966C9200EAF80A /* SiggyTurn */,
+				A7E8EEA62A966C9200EAF80A /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		A7E8EE872A966C4D00EAF80A /* Products */ = {
+		A7E8EEA62A966C9200EAF80A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A7E8EE862A966C4D00EAF80A /* SiggyTurn.app */,
+				A7E8EEA52A966C9200EAF80A /* SiggyTurn.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		A7E8EE882A966C4D00EAF80A /* SiggyTurn */ = {
+		A7E8EEA72A966C9200EAF80A /* SiggyTurn */ = {
 			isa = PBXGroup;
 			children = (
-				A7E8EE892A966C4D00EAF80A /* SiggyTurnApp.swift */,
-				A7E8EE8B2A966C4D00EAF80A /* ContentView.swift */,
-				A7E8EE8D2A966C4E00EAF80A /* Assets.xcassets */,
-				A7E8EE922A966C4E00EAF80A /* Persistence.swift */,
-				A7E8EE942A966C4E00EAF80A /* SiggyTurn.xcdatamodeld */,
-				A7E8EE8F2A966C4E00EAF80A /* Preview Content */,
+				A7E8EEA82A966C9200EAF80A /* SiggyTurnApp.swift */,
+				A7E8EEAA2A966C9200EAF80A /* ContentView.swift */,
+				A7E8EEAC2A966C9300EAF80A /* Assets.xcassets */,
+				A7E8EEAE2A966C9300EAF80A /* Preview Content */,
 			);
 			path = SiggyTurn;
 			sourceTree = "<group>";
 		};
-		A7E8EE8F2A966C4E00EAF80A /* Preview Content */ = {
+		A7E8EEAE2A966C9300EAF80A /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				A7E8EE902A966C4E00EAF80A /* Preview Assets.xcassets */,
+				A7E8EEAF2A966C9300EAF80A /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -76,13 +70,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		A7E8EE852A966C4D00EAF80A /* SiggyTurn */ = {
+		A7E8EEA42A966C9200EAF80A /* SiggyTurn */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A7E8EE992A966C4E00EAF80A /* Build configuration list for PBXNativeTarget "SiggyTurn" */;
+			buildConfigurationList = A7E8EEB32A966C9300EAF80A /* Build configuration list for PBXNativeTarget "SiggyTurn" */;
 			buildPhases = (
-				A7E8EE822A966C4D00EAF80A /* Sources */,
-				A7E8EE832A966C4D00EAF80A /* Frameworks */,
-				A7E8EE842A966C4D00EAF80A /* Resources */,
+				A7E8EEA12A966C9200EAF80A /* Sources */,
+				A7E8EEA22A966C9200EAF80A /* Frameworks */,
+				A7E8EEA32A966C9200EAF80A /* Resources */,
 			);
 			buildRules = (
 			);
@@ -90,25 +84,25 @@
 			);
 			name = SiggyTurn;
 			productName = SiggyTurn;
-			productReference = A7E8EE862A966C4D00EAF80A /* SiggyTurn.app */;
+			productReference = A7E8EEA52A966C9200EAF80A /* SiggyTurn.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		A7E8EE7E2A966C4D00EAF80A /* Project object */ = {
+		A7E8EE9D2A966C9200EAF80A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1430;
 				LastUpgradeCheck = 1430;
 				TargetAttributes = {
-					A7E8EE852A966C4D00EAF80A = {
+					A7E8EEA42A966C9200EAF80A = {
 						CreatedOnToolsVersion = 14.3.1;
 					};
 				};
 			};
-			buildConfigurationList = A7E8EE812A966C4D00EAF80A /* Build configuration list for PBXProject "SiggyTurn" */;
+			buildConfigurationList = A7E8EEA02A966C9200EAF80A /* Build configuration list for PBXProject "SiggyTurn" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -116,44 +110,42 @@
 				en,
 				Base,
 			);
-			mainGroup = A7E8EE7D2A966C4D00EAF80A;
-			productRefGroup = A7E8EE872A966C4D00EAF80A /* Products */;
+			mainGroup = A7E8EE9C2A966C9200EAF80A;
+			productRefGroup = A7E8EEA62A966C9200EAF80A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				A7E8EE852A966C4D00EAF80A /* SiggyTurn */,
+				A7E8EEA42A966C9200EAF80A /* SiggyTurn */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		A7E8EE842A966C4D00EAF80A /* Resources */ = {
+		A7E8EEA32A966C9200EAF80A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A7E8EE912A966C4E00EAF80A /* Preview Assets.xcassets in Resources */,
-				A7E8EE8E2A966C4E00EAF80A /* Assets.xcassets in Resources */,
+				A7E8EEB02A966C9300EAF80A /* Preview Assets.xcassets in Resources */,
+				A7E8EEAD2A966C9300EAF80A /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		A7E8EE822A966C4D00EAF80A /* Sources */ = {
+		A7E8EEA12A966C9200EAF80A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A7E8EE932A966C4E00EAF80A /* Persistence.swift in Sources */,
-				A7E8EE8C2A966C4D00EAF80A /* ContentView.swift in Sources */,
-				A7E8EE962A966C4E00EAF80A /* SiggyTurn.xcdatamodeld in Sources */,
-				A7E8EE8A2A966C4D00EAF80A /* SiggyTurnApp.swift in Sources */,
+				A7E8EEAB2A966C9200EAF80A /* ContentView.swift in Sources */,
+				A7E8EEA92A966C9200EAF80A /* SiggyTurnApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		A7E8EE972A966C4E00EAF80A /* Debug */ = {
+		A7E8EEB12A966C9300EAF80A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -213,7 +205,7 @@
 			};
 			name = Debug;
 		};
-		A7E8EE982A966C4E00EAF80A /* Release */ = {
+		A7E8EEB22A966C9300EAF80A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -267,7 +259,7 @@
 			};
 			name = Release;
 		};
-		A7E8EE9A2A966C4E00EAF80A /* Debug */ = {
+		A7E8EEB42A966C9300EAF80A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -296,7 +288,7 @@
 			};
 			name = Debug;
 		};
-		A7E8EE9B2A966C4E00EAF80A /* Release */ = {
+		A7E8EEB52A966C9300EAF80A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -328,38 +320,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A7E8EE812A966C4D00EAF80A /* Build configuration list for PBXProject "SiggyTurn" */ = {
+		A7E8EEA02A966C9200EAF80A /* Build configuration list for PBXProject "SiggyTurn" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A7E8EE972A966C4E00EAF80A /* Debug */,
-				A7E8EE982A966C4E00EAF80A /* Release */,
+				A7E8EEB12A966C9300EAF80A /* Debug */,
+				A7E8EEB22A966C9300EAF80A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A7E8EE992A966C4E00EAF80A /* Build configuration list for PBXNativeTarget "SiggyTurn" */ = {
+		A7E8EEB32A966C9300EAF80A /* Build configuration list for PBXNativeTarget "SiggyTurn" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A7E8EE9A2A966C4E00EAF80A /* Debug */,
-				A7E8EE9B2A966C4E00EAF80A /* Release */,
+				A7E8EEB42A966C9300EAF80A /* Debug */,
+				A7E8EEB52A966C9300EAF80A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		A7E8EE942A966C4E00EAF80A /* SiggyTurn.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				A7E8EE952A966C4E00EAF80A /* SiggyTurn.xcdatamodel */,
-			);
-			currentVersion = A7E8EE952A966C4E00EAF80A /* SiggyTurn.xcdatamodel */;
-			path = SiggyTurn.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
-	rootObject = A7E8EE7E2A966C4D00EAF80A /* Project object */;
+	rootObject = A7E8EE9D2A966C9200EAF80A /* Project object */;
 }
