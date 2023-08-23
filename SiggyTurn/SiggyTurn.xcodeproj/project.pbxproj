@@ -12,9 +12,11 @@
 		A7E8EEAD2A966C9300EAF80A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A7E8EEAC2A966C9300EAF80A /* Assets.xcassets */; };
 		A7E8EEB02A966C9300EAF80A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A7E8EEAF2A966C9300EAF80A /* Preview Assets.xcassets */; };
 		A7E8EECA2A96993200EAF80A /* CKUtilityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E8EEC62A96993200EAF80A /* CKUtilityService.swift */; };
-		A7E8EECB2A96993200EAF80A /* CKUserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E8EEC72A96993200EAF80A /* CKUserService.swift */; };
 		A7E8EECC2A96993200EAF80A /* CKCrudService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E8EEC82A96993200EAF80A /* CKCrudService.swift */; };
 		A7E8EECD2A96993200EAF80A /* SiggyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E8EEC92A96993200EAF80A /* SiggyModel.swift */; };
+		A7E8EECF2A969BA800EAF80A /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E8EECE2A969BA800EAF80A /* GameView.swift */; };
+		A7E8EED12A969BB500EAF80A /* RankingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E8EED02A969BB500EAF80A /* RankingView.swift */; };
+		A7E8EED32A969DEC00EAF80A /* CKUserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E8EED22A969DEC00EAF80A /* CKUserService.swift */; };
 		F970B3F72A96709F00192FBA /* SpinService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F970B3F62A96709F00192FBA /* SpinService.swift */; };
 /* End PBXBuildFile section */
 
@@ -25,9 +27,12 @@
 		A7E8EEAC2A966C9300EAF80A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A7E8EEAF2A966C9300EAF80A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A7E8EEC62A96993200EAF80A /* CKUtilityService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CKUtilityService.swift; sourceTree = "<group>"; };
-		A7E8EEC72A96993200EAF80A /* CKUserService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CKUserService.swift; sourceTree = "<group>"; };
 		A7E8EEC82A96993200EAF80A /* CKCrudService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CKCrudService.swift; sourceTree = "<group>"; };
 		A7E8EEC92A96993200EAF80A /* SiggyModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SiggyModel.swift; path = SiggyTurn/SiggyModel.swift; sourceTree = SOURCE_ROOT; };
+		A7E8EECE2A969BA800EAF80A /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
+		A7E8EED02A969BB500EAF80A /* RankingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingView.swift; sourceTree = "<group>"; };
+		A7E8EED22A969DEC00EAF80A /* CKUserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CKUserService.swift; sourceTree = "<group>"; };
+		A7E8EED42A969F0500EAF80A /* SiggyTurn.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SiggyTurn.entitlements; sourceTree = "<group>"; };
 		F970B3F62A96709F00192FBA /* SpinService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -61,9 +66,12 @@
 		A7E8EEA72A966C9200EAF80A /* SiggyTurn */ = {
 			isa = PBXGroup;
 			children = (
+				A7E8EED42A969F0500EAF80A /* SiggyTurn.entitlements */,
 				A7E8EEA82A966C9200EAF80A /* SiggyTurnApp.swift */,
 				A7E8EEC52A96993200EAF80A /* CloudKit */,
 				A7E8EEAA2A966C9200EAF80A /* ContentView.swift */,
+				A7E8EECE2A969BA800EAF80A /* GameView.swift */,
+				A7E8EED02A969BB500EAF80A /* RankingView.swift */,
 				A7E8EEC92A96993200EAF80A /* SiggyModel.swift */,
 				F970B3F82A96710F00192FBA /* SpinService */,
 				A7E8EEAC2A966C9300EAF80A /* Assets.xcassets */,
@@ -84,8 +92,8 @@
 			isa = PBXGroup;
 			children = (
 				A7E8EEC62A96993200EAF80A /* CKUtilityService.swift */,
-				A7E8EEC72A96993200EAF80A /* CKUserService.swift */,
 				A7E8EEC82A96993200EAF80A /* CKCrudService.swift */,
+				A7E8EED22A969DEC00EAF80A /* CKUserService.swift */,
 			);
 			name = CloudKit;
 			path = SiggyTurn/CloudKit;
@@ -170,12 +178,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				A7E8EECA2A96993200EAF80A /* CKUtilityService.swift in Sources */,
+				A7E8EED12A969BB500EAF80A /* RankingView.swift in Sources */,
 				A7E8EECD2A96993200EAF80A /* SiggyModel.swift in Sources */,
-				A7E8EECB2A96993200EAF80A /* CKUserService.swift in Sources */,
+				A7E8EED32A969DEC00EAF80A /* CKUserService.swift in Sources */,
 				A7E8EEAB2A966C9200EAF80A /* ContentView.swift in Sources */,
 				A7E8EEA92A966C9200EAF80A /* SiggyTurnApp.swift in Sources */,
 				F970B3F72A96709F00192FBA /* SpinService.swift in Sources */,
 				A7E8EECC2A96993200EAF80A /* CKCrudService.swift in Sources */,
+				A7E8EECF2A969BA800EAF80A /* GameView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,10 +311,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SiggyTurn/SiggyTurn.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SiggyTurn/Preview Content\"";
-				DEVELOPMENT_TEAM = 2V5RBDFH46;
+				DEVELOPMENT_TEAM = DFJUFQ6A3N;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Aceita ae";
@@ -332,10 +343,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SiggyTurn/SiggyTurn.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SiggyTurn/Preview Content\"";
-				DEVELOPMENT_TEAM = 2V5RBDFH46;
+				DEVELOPMENT_TEAM = DFJUFQ6A3N;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Aceita ae";
