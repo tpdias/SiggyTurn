@@ -9,9 +9,13 @@ import SwiftUI
 
 @main
 struct SiggyTurnApp: App {
+    
+    @StateObject var ch = CompassHeading()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView(service: CompassHeading())
+            ContentView()
+                .environmentObject(ch)
         }
     }
 }

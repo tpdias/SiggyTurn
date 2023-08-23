@@ -10,49 +10,37 @@ import CoreLocation
 
 struct ContentView: View {
     
-    @StateObject var service: CompassHeading
+    private let generatorRestoDez: UIImpactFeedbackGenerator = UIImpactFeedbackGenerator(style: .heavy)
+    private let standardGenerator: UIImpactFeedbackGenerator = UIImpactFeedbackGenerator(style: .medium)
+    
+    @EnvironmentObject var service: CompassHeading
+    @State var currentColor: Color = .white
     
     var body: some View {
-        ZStack{
-            Rectangle()
-                .foregroundColor(.black)
-                .ignoresSafeArea()
+        screen
+            .onReceive(service.$numberOfSpins) { booleano in
+                if service.numberOfSpins % 10 == 0 {
+                    generatorRestoDez.impactOccurred()
+                } else {
+                    standardGenerator.impactOccurred()
+                }
+                
+                currentColor = Color.randomStrong()
+            }
+    }
+    
+    var screen: some View {
             VStack {
-                Text(String(service.degrees))
-                    .padding()
-                    .background(
-                        Color.red
-                            
-                    )
-                    
-                    .cornerRadius(30)
-                
                 Text(String(service.numberOfSpins))
-                    .padding()
-                    .background(
-                        Color.blue
-                            .shadow(color: .blue, radius: 30)
-                            .shadow(color: .blue, radius: 30)
-                            .shadow(color: .blue, radius: 30)
-                            .shadow(color: .blue, radius: 30)
-                    )
-                    
-                    .cornerRadius(30)
-                
-                
-                Rectangle()
-                    .frame(width: 200, height: 200)
-                    .foregroundColor(.yellow)
-                    .shadow(color: .yellow, radius: 8)
-                    .shadow(color: .yellow, radius: 8)
+                    .foregroundColor(currentColor)
+                    .font(.system(size: service.didChangeSpin ? 100 : 60))
+                    .shadow(color: currentColor, radius: 8)
+                    .shadow(color: currentColor, radius: 8)
             }
             .padding()
-            
-            if service.bugged {
-                Rectangle()
-                    .foregroundColor(.green)
-                    .ignoresSafeArea()
-            }
-        }
+        
+        .animation(.easeInOut, value: service.bugged)
+        .animation(.easeInOut, value: service.didChangeSpin)
+        .rotationEffect(Angle(degrees: -1 * (service.trueHeading - service.offSet)))
     }
 }
