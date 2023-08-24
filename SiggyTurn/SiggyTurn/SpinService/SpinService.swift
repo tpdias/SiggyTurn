@@ -11,7 +11,21 @@ import Combine
 
 class CompassHeading: NSObject, ObservableObject, CLLocationManagerDelegate {
     @Published var bugged: Bool = false
-    @Published var numberOfSpins: Int = 0
+    @Published var numberOfSpins: Int {
+        didSet {
+            didChangeSpin = true
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
+                self.didChangeSpin = false
+            }
+            
+            UserDefaults.standard.numberOfSpins = numberOfSpins
+        }
+    }
+    
+    @Published var didChangeSpin: Bool = false
+
+    var trueHeading: Double = 0
+    var offSet: Double = 0
     
     var objectWillChange = PassthroughSubject<Void, Never>()
     var lastDirection: DirectionGoing = .right
@@ -53,6 +67,7 @@ class CompassHeading: NSObject, ObservableObject, CLLocationManagerDelegate {
     
     override init() {
         self.locationManager = CLLocationManager()
+        self.numberOfSpins = UserDefaults.standard.numberOfSpins
         super.init()
         
         self.locationManager.delegate = self
@@ -69,37 +84,26 @@ class CompassHeading: NSObject, ObservableObject, CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didUpdateHeading newHeading: CLHeading) {
         
-        bugged = false
+        trueHeading = newHeading.trueHeading
         
         if degrees == 0 {
             self.degrees = newHeading.trueHeading
+            self.offSet = newHeading.trueHeading
             return
         }
         
-        // TODO: fazer aqui a lógica de saber quantos giros o cara deu
-//        if abs(newHeading.trueHeading - self.degrees) < 200 {
-//            maior = max(maior, abs(newHeading.trueHeading - self.degrees))
-//            print(maior)
-//        } //else {
-//
-//            if newHeading.trueHeading - self.degrees > 200 {
-//                self.degrees = 360 - newHeading.trueHeading
-//            } else {
-//                if newHeading.trueHeading - self.degrees < -200 {
-//                    self.degrees = newHeading.trueHeading + 360
-//                }
-//            }
-        //}
-        
         if abs(newHeading.trueHeading - degrees) > 200 {
             self.degrees = newHeading.trueHeading
-            bugged = true
+//            bugged = true
+//            DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+//                self.bugged = false
+//            }
             return
         }
         
         // base case
         if newHeading.trueHeading > self.degrees {
-            rightStack += newHeading.trueHeading - self.degrees
+            rightStack += abs(newHeading.trueHeading - self.degrees)
             print(rightStack)
         } else {
             leftStack += abs(newHeading.trueHeading - self.degrees)

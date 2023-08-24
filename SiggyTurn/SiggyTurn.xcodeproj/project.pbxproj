@@ -16,6 +16,8 @@
 		A7E8EECD2A96993200EAF80A /* SiggyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E8EEC92A96993200EAF80A /* SiggyModel.swift */; };
 		A7E8EED32A969DEC00EAF80A /* CKUserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E8EED22A969DEC00EAF80A /* CKUserService.swift */; };
 		F970B3F72A96709F00192FBA /* SpinService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F970B3F62A96709F00192FBA /* SpinService.swift */; };
+		F970B3FC2A96972A00192FBA /* ExtensionUserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = F970B3FB2A96972A00192FBA /* ExtensionUserDefault.swift */; };
+		F970B4002A969EA300192FBA /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F970B3FF2A969EA300192FBA /* ColorExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,7 +31,10 @@
 		A7E8EEC92A96993200EAF80A /* SiggyModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SiggyModel.swift; path = SiggyTurn/SiggyModel.swift; sourceTree = SOURCE_ROOT; };
 		A7E8EED22A969DEC00EAF80A /* CKUserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CKUserService.swift; sourceTree = "<group>"; };
 		A7E8EED42A969F0500EAF80A /* SiggyTurn.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SiggyTurn.entitlements; sourceTree = "<group>"; };
+		A7E8EED52A96EAE000EAF80A /* SiggyTurn.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SiggyTurn.entitlements; sourceTree = "<group>"; };
 		F970B3F62A96709F00192FBA /* SpinService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinService.swift; sourceTree = "<group>"; };
+		F970B3FB2A96972A00192FBA /* ExtensionUserDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUserDefault.swift; sourceTree = "<group>"; };
+		F970B3FF2A969EA300192FBA /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,10 +68,13 @@
 			isa = PBXGroup;
 			children = (
 				A7E8EED42A969F0500EAF80A /* SiggyTurn.entitlements */,
+				A7E8EED52A96EAE000EAF80A /* SiggyTurn.entitlements */,
 				A7E8EEA82A966C9200EAF80A /* SiggyTurnApp.swift */,
 				A7E8EEC52A96993200EAF80A /* CloudKit */,
 				A7E8EEAA2A966C9200EAF80A /* ContentView.swift */,
 				A7E8EEC92A96993200EAF80A /* SiggyModel.swift */,
+				F970B3FB2A96972A00192FBA /* ExtensionUserDefault.swift */,
+				F970B3FF2A969EA300192FBA /* ColorExtension.swift */,
 				F970B3F82A96710F00192FBA /* SpinService */,
 				A7E8EEAC2A966C9300EAF80A /* Assets.xcassets */,
 				A7E8EEAE2A966C9300EAF80A /* Preview Content */,
@@ -176,8 +184,10 @@
 				A7E8EED32A969DEC00EAF80A /* CKUserService.swift in Sources */,
 				A7E8EEAB2A966C9200EAF80A /* ContentView.swift in Sources */,
 				A7E8EEA92A966C9200EAF80A /* SiggyTurnApp.swift in Sources */,
+				F970B3FC2A96972A00192FBA /* ExtensionUserDefault.swift in Sources */,
 				F970B3F72A96709F00192FBA /* SpinService.swift in Sources */,
 				A7E8EECC2A96993200EAF80A /* CKCrudService.swift in Sources */,
+				F970B4002A969EA300192FBA /* ColorExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,13 +320,12 @@
 				DEVELOPMENT_TEAM = DFJUFQ6A3N;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Aceita ae";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -342,13 +351,12 @@
 				DEVELOPMENT_TEAM = DFJUFQ6A3N;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Aceita ae";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
