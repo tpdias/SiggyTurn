@@ -91,8 +91,8 @@ class CKCrudService: ObservableObject {
             .store(in: &cancellables)
     }
     
-    func updateLocationByModel(userModel: SiggyUserModel, newTurns: Int) {
-        guard let newUser = userModel.update(newTurns: newTurns) else { return }
+    func update(newTurns: Int) {
+        guard let newUser = self.localUser?.update(newTurns: newTurns) else { return }
         CKUtilityService.update(item: newUser) { result in
         }
     }
