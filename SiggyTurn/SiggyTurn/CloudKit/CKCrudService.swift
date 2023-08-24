@@ -14,7 +14,9 @@ class CKCrudService: ObservableObject {
 
     
     init(completion: @escaping () -> Void) {
-        
+        CKUtilityService.getiCloudStatus()
+        CKUtilityService.requestApplicationPermission()
+
         CKUtilityService.discoverUserIdentity()
             .receive(on: DispatchQueue.main)
             .sink { _ in
@@ -22,8 +24,6 @@ class CKCrudService: ObservableObject {
             } receiveValue: { id in
                 
                 self.localUserICloudID = id
-                self.fetchUser() {}
-                completion()
             }
             .store(in: &cancellables)
         
@@ -33,8 +33,11 @@ class CKCrudService: ObservableObject {
                 
             } receiveValue: { name in
                 self.localUserName = name
+                self.fetchUser() {}
+                completion()
             }
             .store(in: &cancellables)
+        
         
     }
     
@@ -59,6 +62,7 @@ class CKCrudService: ObservableObject {
                 } else {
                     if(UserDefaults.standard.userID != self.localUserICloudID || !self.isRegistered){
                         UserDefaults.standard.userID = ""
+                        self.addUser()
                     }
                 }
                 completion()
@@ -69,7 +73,7 @@ class CKCrudService: ObservableObject {
         
     }
     
-    func fetchAllUsers(userId: String, userLocation: CLLocationCoordinate2D, radius: Double) {
+    func fetchAllUsers() {
         let predicate = NSPredicate(value: true)
         let recordType = "SiggyTurn"
         
@@ -82,6 +86,7 @@ class CKCrudService: ObservableObject {
                 returnedUsers.forEach { user in
                     self?.users.append(user)
                 }
+                self?.users.sort { $0.turns > $1.turns }
             }
             .store(in: &cancellables)
     }
