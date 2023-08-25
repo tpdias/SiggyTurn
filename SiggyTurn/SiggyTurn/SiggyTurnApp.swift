@@ -16,15 +16,6 @@ extension UserDefaults {
             UserDefaults.standard.setValue(newValue, forKey: "userID")
         }
     }
-    var user: SiggyUserModel {
-        get {
-            return (UserDefaults.standard.value(forKey: "user") as! SiggyUserModel) 
-        }
-        set {
-            UserDefaults.standard.setValue(newValue, forKey: "user")
-
-        }
-    }
 }
 
 @main

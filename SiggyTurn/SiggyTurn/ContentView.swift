@@ -36,7 +36,7 @@ struct ContentView: View {
                 }
             }
             .onReceive(timer) { _ in
-                if(UserDefaults.standard.user == nil){
+                if(cloud.localUser == nil){
                     cloud.fetchUser {
                     }
                 }
