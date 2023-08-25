@@ -104,10 +104,10 @@ class CompassHeading: NSObject, ObservableObject, CLLocationManagerDelegate {
         // base case
         if newHeading.trueHeading > self.degrees {
             rightStack += abs(newHeading.trueHeading - self.degrees)
-            print(rightStack)
+            //print(rightStack)
         } else {
             leftStack += abs(newHeading.trueHeading - self.degrees)
-            print(leftStack)
+            //print(leftStack)
         }
         
         self.degrees = newHeading.trueHeading
