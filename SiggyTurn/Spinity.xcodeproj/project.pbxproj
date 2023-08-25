@@ -21,7 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		A7E8EEA52A966C9200EAF80A /* SiggyTurn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SiggyTurn.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A7E8EEA52A966C9200EAF80A /* Spinity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Spinity.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7E8EEA82A966C9200EAF80A /* SiggyTurnApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiggyTurnApp.swift; sourceTree = "<group>"; };
 		A7E8EEAA2A966C9200EAF80A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A7E8EEAC2A966C9300EAF80A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -59,7 +59,7 @@
 		A7E8EEA62A966C9200EAF80A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A7E8EEA52A966C9200EAF80A /* SiggyTurn.app */,
+				A7E8EEA52A966C9200EAF80A /* Spinity.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -112,9 +112,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		A7E8EEA42A966C9200EAF80A /* SiggyTurn */ = {
+		A7E8EEA42A966C9200EAF80A /* Spinity */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A7E8EEB32A966C9300EAF80A /* Build configuration list for PBXNativeTarget "SiggyTurn" */;
+			buildConfigurationList = A7E8EEB32A966C9300EAF80A /* Build configuration list for PBXNativeTarget "Spinity" */;
 			buildPhases = (
 				A7E8EEA12A966C9200EAF80A /* Sources */,
 				A7E8EEA22A966C9200EAF80A /* Frameworks */,
@@ -124,9 +124,9 @@
 			);
 			dependencies = (
 			);
-			name = SiggyTurn;
+			name = Spinity;
 			productName = SiggyTurn;
-			productReference = A7E8EEA52A966C9200EAF80A /* SiggyTurn.app */;
+			productReference = A7E8EEA52A966C9200EAF80A /* Spinity.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -144,7 +144,7 @@
 					};
 				};
 			};
-			buildConfigurationList = A7E8EEA02A966C9200EAF80A /* Build configuration list for PBXProject "SiggyTurn" */;
+			buildConfigurationList = A7E8EEA02A966C9200EAF80A /* Build configuration list for PBXProject "Spinity" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -157,7 +157,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				A7E8EEA42A966C9200EAF80A /* SiggyTurn */,
+				A7E8EEA42A966C9200EAF80A /* Spinity */,
 			);
 		};
 /* End PBXProject section */
@@ -314,10 +314,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = SiggyTurn/SiggyTurn.entitlements;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SiggyTurn/Preview Content\"";
-				DEVELOPMENT_TEAM = DFJUFQ6A3N;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = DFJUFQ6A3N;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -330,9 +333,11 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.tpdias.SiggyTurn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = Spinity;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -345,10 +350,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = SiggyTurn/SiggyTurn.entitlements;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SiggyTurn/Preview Content\"";
-				DEVELOPMENT_TEAM = DFJUFQ6A3N;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = DFJUFQ6A3N;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -361,9 +369,11 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.tpdias.SiggyTurn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = Spinity;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -373,7 +383,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A7E8EEA02A966C9200EAF80A /* Build configuration list for PBXProject "SiggyTurn" */ = {
+		A7E8EEA02A966C9200EAF80A /* Build configuration list for PBXProject "Spinity" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A7E8EEB12A966C9300EAF80A /* Debug */,
@@ -382,7 +392,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A7E8EEB32A966C9300EAF80A /* Build configuration list for PBXNativeTarget "SiggyTurn" */ = {
+		A7E8EEB32A966C9300EAF80A /* Build configuration list for PBXNativeTarget "Spinity" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A7E8EEB42A966C9300EAF80A /* Debug */,

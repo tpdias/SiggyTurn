@@ -14,7 +14,8 @@ struct ContentView: View {
     private let standardGenerator: UIImpactFeedbackGenerator = UIImpactFeedbackGenerator(style: .medium)
     @EnvironmentObject var service: CompassHeading
     @State var currentColor: Color = .white
-    private let timer = Timer.publish(every: 30, on: .main, in: .common).autoconnect()
+    @State var top3: [SiggyUserModel] = []
+    private let timer = Timer.publish(every: 5, on: .main, in: .common).autoconnect()
     var body: some View {
         screen
             .onReceive(service.$numberOfSpins) { booleano in
@@ -25,6 +26,19 @@ struct ContentView: View {
                 }
                 
                 currentColor = Color.randomStrong()
+            }
+            .onAppear(){
+                cloud.fetchUser {
+                }
+                Task {
+                    await cloud.fetchAllUsers()
+                    top3 = cloud.users
+                }
+            }
+            .onReceive(timer) { _ in
+                cloud.update(newTurns: service.numberOfSpins)
+                cloud.fetchAllUsers()
+                top3 = cloud.users
             }
     }
     var screen: some View {
@@ -40,7 +54,7 @@ struct ContentView: View {
                 .shadow(color: currentColor, radius: 3)
                 .padding(.top, 20)
                 .padding(.bottom, -8)
-            List(cloud.users.prefix(3), id: \.username) { user in
+            List(top3.prefix(3), id: \.username) { user in
                 HStack {
                     Text(user.username)
                         .font(.headline)
@@ -55,6 +69,7 @@ struct ContentView: View {
                     Color.clear
                 )
             }
+            .listStyle(.plain)
             .frame(maxHeight: 200)
             .background(Color.clear)
             //.scrollContentBackground(.hidden)
@@ -64,15 +79,7 @@ struct ContentView: View {
         .animation(.easeInOut, value: service.bugged)
         .animation(.easeInOut, value: service.didChangeSpin)
         .rotationEffect(Angle(degrees: -1 * (service.trueHeading - service.offSet)))
-        .onAppear(){
-            Task {
-                await cloud.fetchAllUsers()
-            }
-        }
-        .onReceive(timer) { _ in
-            cloud.update(newTurns: service.numberOfSpins)
-            cloud.fetchAllUsers()
-        }
+        
     }
     
 }
