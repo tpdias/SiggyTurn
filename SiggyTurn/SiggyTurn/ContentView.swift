@@ -36,6 +36,10 @@ struct ContentView: View {
                 }
             }
             .onReceive(timer) { _ in
+                if(UserDefaults.standard.user == nil){
+                    cloud.fetchUser {
+                    }
+                }
                 cloud.update(newTurns: service.numberOfSpins)
                 cloud.fetchAllUsers()
                 top3 = cloud.users

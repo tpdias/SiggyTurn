@@ -59,10 +59,13 @@ class CKCrudService: ObservableObject {
                 if(returnedUsers.count > 0){
                     self.isRegistered = true
                     self.localUser = returnedUsers.first
+                    guard let user = returnedUsers.first else {return}
+                    UserDefaults.standard.user = user
                 } else {
                     if(UserDefaults.standard.userID != self.localUserICloudID || !self.isRegistered){
                         UserDefaults.standard.userID = ""
                         self.addUser()
+                         
                     }
                 }
                 completion()
