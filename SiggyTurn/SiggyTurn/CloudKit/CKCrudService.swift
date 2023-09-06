@@ -14,29 +14,30 @@ class CKCrudService: ObservableObject {
 
     
     init(completion: @escaping () -> Void) {
-        CKUtilityService.getiCloudStatus()
-        CKUtilityService.requestApplicationPermission()
-
-        CKUtilityService.discoverUserIdentity()
-            .receive(on: DispatchQueue.main)
-            .sink { _ in
-                
-            } receiveValue: { id in
-                
-                self.localUserICloudID = id
-            }
-            .store(in: &cancellables)
-        
-        CKUtilityService.discoverUserName()
-            .receive(on: DispatchQueue.main)
-            .sink { _ in
-                
-            } receiveValue: { name in
-                self.localUserName = name
-                self.fetchUser() {}
-                completion()
-            }
-            .store(in: &cancellables)
+//        CKUtilityService.requestApplicationPermission()
+//
+//        CKUtilityService.getiCloudStatus()
+//
+//        CKUtilityService.discoverUserIdentity()
+//            .receive(on: DispatchQueue.main)
+//            .sink { _ in
+//                
+//            } receiveValue: { id in
+//                
+//                self.localUserICloudID = id
+//            }
+//            .store(in: &cancellables)
+//        
+//        CKUtilityService.discoverUserName()
+//            .receive(on: DispatchQueue.main)
+//            .sink { _ in
+//                
+//            } receiveValue: { name in
+//                self.localUserName = name
+//                self.fetchUser() {}
+//                completion()
+//            }
+//            .store(in: &cancellables)
         
         
     }
