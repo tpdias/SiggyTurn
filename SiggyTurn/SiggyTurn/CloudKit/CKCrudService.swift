@@ -49,7 +49,7 @@ class CKCrudService: ObservableObject {
         }
     }
     
-    func fetchUser(completion: @escaping () -> Void){
+    func fetchUser(){
         let predicate = NSPredicate(format: "id == %@", localUserICloudID)
         let recordType = "SiggyTurn"
         CKUtilityService.fetch(predicate: predicate, recordType: recordType)
@@ -67,7 +67,6 @@ class CKCrudService: ObservableObject {
                          
                     }
                 }
-                completion()
                 return
             }
             .store(in: &cancellables)

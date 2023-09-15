@@ -52,6 +52,7 @@ class CloudKitUserViewModel: ObservableObject {
                 
             } receiveValue: { [weak self] returnID in
                 self?.userID = returnID
+
             }
             .store(in: &cancellables)
     }

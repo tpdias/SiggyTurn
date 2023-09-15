@@ -9,13 +9,15 @@ import SwiftUI
 import CoreLocation
 
 struct ContentView: View {
+    @State private var isLoading = false
     @EnvironmentObject var cloud: CKCrudService
+    @EnvironmentObject var cloudUser: CloudKitUserViewModel
     private let generatorRestoDez: UIImpactFeedbackGenerator = UIImpactFeedbackGenerator(style: .heavy)
     private let standardGenerator: UIImpactFeedbackGenerator = UIImpactFeedbackGenerator(style: .medium)
     @EnvironmentObject var service: CompassHeading
     @State var currentColor: Color = .white
     @State var top3: [SiggyUserModel] = []
-    private let timer = Timer.publish(every: 5, on: .main, in: .common).autoconnect()
+    private let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     var body: some View {
         screen
             .onReceive(service.$numberOfSpins) { booleano in
@@ -28,21 +30,32 @@ struct ContentView: View {
                 currentColor = Color.randomStrong()
             }
             .onAppear(){
-                cloud.fetchUser {
+                isLoading = true
+            }
+            .onChange(of: cloudUser.userID, perform: { newValue in
+                cloud.localUserICloudID = cloudUser.userID
+                CKUtilityService.discoverUserName()
+                   .receive(on: DispatchQueue.main)
+                   .sink { _ in
+
+                   } receiveValue: { name in
+                       cloud.localUserName = name
+                       isLoading = false
                 }
+                cloud.fetchUser()
                 Task {
                     await cloud.fetchAllUsers()
                     top3 = cloud.users
                 }
-            }
+                isLoading = false
+                
+            })
             .onReceive(timer) { _ in
-                if(cloud.localUser == nil){
-                    cloud.fetchUser {
-                    }
+                if(!isLoading){
+                    cloud.update(newTurns: service.numberOfSpins)
+                    cloud.fetchAllUsers()
+                    top3 = cloud.users
                 }
-                cloud.update(newTurns: service.numberOfSpins)
-                cloud.fetchAllUsers()
-                top3 = cloud.users
             }
     }
     var screen: some View {
@@ -52,32 +65,39 @@ struct ContentView: View {
                 .font(.system(size: service.didChangeSpin ? 100 : 60))
                 .shadow(color: currentColor, radius: 8)
                 .shadow(color: currentColor, radius: 8)
-            Text("Best Turners")
-                .font(.headline)
-                .foregroundColor(currentColor)
-                .shadow(color: currentColor, radius: 3)
-                .padding(.top, 20)
-                .padding(.bottom, -8)
-            List(top3.prefix(3), id: \.username) { user in
-                HStack {
-                    Text(user.username)
-                        .font(.headline)
-                        .foregroundColor(currentColor)
-                        .shadow(color: currentColor, radius: 3)
-                    Spacer()
-                    Text("Turns: \(user.turns)")
-                        .foregroundColor(currentColor)
-                        .shadow(color: currentColor, radius: 3)
-                }
-                .listRowBackground(
-                    Color.clear
-                )
+            if(isLoading){
+                ProgressView()
+                    .progressViewStyle(CircularProgressViewStyle(tint: currentColor))
+                    .scaleEffect(2)
             }
-            .listStyle(.plain)
-            .frame(maxHeight: 200)
-            .background(Color.clear)
-            //.scrollContentBackground(.hidden)
-            .ignoresSafeArea(.all)
+            else {
+                Text("Best Turners")
+                    .font(.headline)
+                    .foregroundColor(currentColor)
+                    .shadow(color: currentColor, radius: 3)
+                    .padding(.top, 20)
+                    .padding(.bottom, -8)
+                List(top3.prefix(3), id: \.username) { user in
+                    HStack {
+                        Text(user.username)
+                            .font(.headline)
+                            .foregroundColor(currentColor)
+                            .shadow(color: currentColor, radius: 3)
+                        Spacer()
+                        Text("Turns: \(user.turns)")
+                            .foregroundColor(currentColor)
+                            .shadow(color: currentColor, radius: 3)
+                    }
+                    .listRowBackground(
+                        Color.clear
+                    )
+                }
+                .listStyle(.plain)
+                .frame(maxHeight: 200)
+                .background(Color.clear)
+                //.scrollContentBackground(.hidden)
+                .ignoresSafeArea(.all)
+            }
         }
         .padding()
         .animation(.easeInOut, value: service.bugged)
